@@ -1,0 +1,24 @@
+<%- include('./partials/head') %>
+
+<%- include('./partials/header') %>
+
+<main>
+ 
+    <ul>
+       <% for( let i = 0; i < genero.length; i++) { %>
+       <li> Nombre: <%= genero[i].nombre %>
+            Integrantes: <%= genero[i].integrantes %>
+            Genero: <%= genero[i].genero %>
+            Top Canciones: <%= genero[i].topCanciones %>
+            Cover: <%= genero[i].cover %>
+            Id: <%= genero[i].id%>
+            Video: <%= genero[i].video %>
+
+      
+      </li>
+       <% } %>
+
+    </ul>
+   </main>
+
+<%- include('./partials/footer') %>
