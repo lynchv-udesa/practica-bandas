@@ -2,7 +2,7 @@ let db = require('../db/index')
 
 const bandasController = {
     index: function(req,res){
-        return res.render('bandas',{
+        return res.render('index',{
             index: db.lista,
             mensaje: 'todas las bandas'
         });
@@ -17,13 +17,13 @@ const bandasController = {
             }
         }
         if(resultado.length == 0) {
-            return res.render('bandas', {
+            return res.render('index', {
                 index: resultado,
                 mensaje: 'no tenemos a la banda con el id ' + bandaId,
             })
         }
         else{
-            return res.render('bandas', {
+            return res.render('index', {
                 index: resultado,
                 mensaje: 'Banda con id ' + bandaId,
             })
@@ -44,7 +44,7 @@ const bandasController = {
                 })
             }
             else{
-                return res.render('bandas', {
+                return res.render('index', {
                     index: resultado,
                     mensaje: 'Banda del genero ' + bandaGenero,
                 })
