@@ -13,13 +13,8 @@
         <ul>
           <% for( let i=0; i < index.length; i++) { %>
             <li> 
-              Nombre: <%= index[i].nombre %>
-              Integrantes: <%= index[i].integrantes %>
-              Genero: <%= index[i].genero %>
-              Top Canciones: <%= index[i].topCanciones %>
-              Cover: <%= index[i].cover %>
-              Id: <%= index[i].id%>
-              Video: <%= index[i].video %>
+              <%= index[i].nombre %>
+              <img src="<%= index[i].cover %>" alt="">
             </li>
             <% } %>
 
