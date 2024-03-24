@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+  <body>
+    <%- include('./partials/header') %>
+      <main id="bandas__main">
+        <h1 class="bandas__h1"><%= mensaje %></h1>
+        <div class="div__container">
+          <% for (let i=0; i < index.length; i++ ) { %>
+          <div class="div__content">
+            <div class="div__card">
+              <div class="div__name">
+                <ul>
+                    <li>
+                      <%= index[i].nombre %>
+                    </li>
+                </ul>
+              </div>
+              <div class="div__image">
+                <div class="card-image">
+                <ul>
+                    <li>
+                      <img class="card__img" src="<%= index[i].cover %>" alt="">
+                    </li>
+                </ul>
+                <button class="button"><a class="button__a" href="/bandas/<%= index[i].iD %>">Más sobre la banda</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </main>
+
+      <%- include('./partials/footer') %>
+  </body>
+
+</html>

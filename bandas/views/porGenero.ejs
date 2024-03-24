@@ -1,24 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
 <%- include('./partials/head') %>
 
-<%- include('./partials/header') %>
+  <body>
+    <%- include('./partials/header') %>
+      <main>
+        <div class="div__container">
+          <% for (let i=0; i < index.length; i++ ) { %>
+          <div class="div__content">
+            <div class="div__card">
+              <div class="div__name">
+                <ul>
+                    <li>
+                      <%= index[i].nombre %>
+                    </li>
+                </ul>
+              </div>
+              <div class="div__image">
+                <div class="card-image">
+                <ul>
+                    <li>
+                      <img class="card__img" src="<%= index[i].cover %>" alt="">
+                    </li>
+                </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </main>
 
-<main>
- 
-    <ul>
-       <% for( let i = 0; i < genero.length; i++) { %>
-       <li> Nombre: <%= genero[i].nombre %>
-            Integrantes: <%= genero[i].integrantes %>
-            Genero: <%= genero[i].genero %>
-            Top Canciones: <%= genero[i].topCanciones %>
-            Cover: <%= genero[i].cover %>
-            Id: <%= genero[i].id%>
-            Video: <%= genero[i].video %>
+      <%- include('./partials/footer') %>
+  </body>
 
-      
-      </li>
-       <% } %>
-
-    </ul>
-   </main>
-
-<%- include('./partials/footer') %>
+</html>
