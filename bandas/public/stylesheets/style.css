@@ -128,7 +128,7 @@ footer {
 
 .div__content:hover {
   opacity: 0.8;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .div__card {
@@ -294,4 +294,50 @@ footer {
 .card-image {
   display: flex;
   flex-direction: column;
+}
+
+#div__card {
+  border-radius: 25px;
+  background-color: #25194B;
+  width: 30rem;
+}
+
+.div__name-li {
+  font-size: 1.5rem;
+}
+
+#li {
+  font-size: 1.5rem;
+}
+
+#div__image-ul{
+  text-align: center;
+}
+
+.detalle__p {
+  color: #4AAFDB;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.detalle__p-a{
+  text-decoration: none;
+  color: #4AAFDB;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.div__image-li{
+  margin: 0 5px;
+  color: #9197DB;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

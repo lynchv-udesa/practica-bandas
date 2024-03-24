@@ -1,24 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
 <%- include('./partials/head') %>
 
-<%- include('./partials/header') %>
+  <body>
+    <%- include('./partials/header') %>
+      <main id="bandas__main">
+        <h1 class="bandas__h1"><%= titulo %></h1>
+        <div class="div__container">
+          <div class="div__content">
+            <div class="div__card" id="div__card">
+               <div class="div__name">
+                  <ul>
+                    <li id="li">
+                      <%= nombre %>
+                    </li>
+                  </ul>
+                </div>
+                <div class="div__image">
+                  <ul id="div__image-ul">
+                    <li>
+                        <img class="card__img" src="/<%= imagen %>" alt="<%= nombre %>">
+                    </li>
+                    <p class="detalle__p"><%= nombre %> es una banda perteneciente al genero <a class="detalle__p-a" href="/bandas/generos/<%= genero %>"><%= genero %></a> que cuenta con <%= integrantes %> integrantes, algunos de sus mejores temas son: </p>
+                     <li class="div__image-li"><%= topCancion1  %></li>
+                     <li class="div__image-li"><%= topCancion2 %></li>
+                     <li class="div__image-li"><%= topCancion3 %></li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<main>
- 
-    <ul>
-       <% for( let i = 0; i < iD.length; i++) { %>
-       <li> Nombre: <%= iD[i].nombre %>
-            Integrantes: <%= iD[i].integrantes %>
-            Genero: <%= iD[i].genero %>
-            Top Canciones: <%= iD[i].topCanciones %>
-            Cover: <%= iD[i].cover %>
-            Id: <%= iD[i].id%>
-            Video: <%= iD[i].video %>
 
-      
-      </li>
-       <% } %>
+      </main>
 
-    </ul>
-   </main>
+      <%- include('./partials/footer') %>
+  </body>
 
-<%- include('./partials/footer') %>
+</html>

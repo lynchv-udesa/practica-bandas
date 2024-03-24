@@ -5,7 +5,7 @@ const data = {
         integrantes: 5,
         genero: "Rock",
         topCanciones: ["Thunderstruck","Highway to hell","Back in black"],
-        cover: 'images/acDc.jpg',
+        cover: "images/acDc.jpg",
         id: 1,
         video: "https://www.youtube.com/watch?v=n_GFN3a0yj0"
     },{

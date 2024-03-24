@@ -4,7 +4,8 @@
 
   <body>
     <%- include('./partials/header') %>
-      <main>
+      <main id="bandas__main">
+        <h1 class="bandas__h1"><%= mensaje %></h1>
         <div class="div__container">
           <% for (let i=0; i < index.length; i++ ) { %>
           <div class="div__content">
@@ -20,9 +21,10 @@
                 <div class="card-image">
                 <ul>
                     <li>
-                      <img class="card__img" src="<%= index[i].cover %>" alt="">
+                      <img class="card__img" src="/<%= index[i].cover %>" alt="">
                     </li>
                 </ul>
+                <button class="button"><a class="button__a" href="/bandas/<%= index[i].id %>">Más sobre la banda</a></button>
                 </div>
               </div>
             </div>
